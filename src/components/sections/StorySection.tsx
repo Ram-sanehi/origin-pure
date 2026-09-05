@@ -4,7 +4,7 @@ import { Leaf, MapPin } from 'lucide-react';
 
 export const StorySection: React.FC = () => {
   return (
-    <section id="story" className="py-16 sm:py-24 section-dark relative overflow-hidden">
+    <section id="story" className="py-10 sm:py-24 section-dark relative overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           

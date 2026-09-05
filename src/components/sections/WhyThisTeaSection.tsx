@@ -8,7 +8,7 @@ import { MAIN_FEATURED_PRODUCT } from '../../data/products';
 
 export const WhyThisTeaSection: React.FC = () => {
   return (
-    <section id="why-us" className="py-16 sm:py-24 section-cream relative border-t border-cream-300/80">
+    <section id="why-us" className="py-10 sm:py-24 section-cream relative border-t border-cream-300/80">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           

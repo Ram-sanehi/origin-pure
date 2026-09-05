@@ -6,7 +6,7 @@ import { fadeInUp, staggerContainer } from '../../lib/animations';
 
 export const ImmersiveIngredientsSection: React.FC = () => {
   return (
-    <section className="py-20 sm:py-28 section-dark relative overflow-hidden">
+    <section className="py-12 sm:py-28 section-dark relative overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-teagreen-800/15 rounded-full blur-3xl pointer-events-none" />
 

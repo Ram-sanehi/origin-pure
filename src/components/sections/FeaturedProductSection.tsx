@@ -18,9 +18,9 @@ export const FeaturedProductSection: React.FC = () => {
   };
 
   return (
-    <section id="details" className="py-12 sm:py-16 section-cream relative border-t border-cream-300/80">
+    <section id="details" className="py-8 sm:py-16 section-cream relative border-t border-cream-300/80">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-cream-50 p-5 sm:p-8 rounded-3xl border border-cream-300/80 shadow-card">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center bg-cream-50 p-4 sm:p-8 rounded-3xl border border-cream-300/80 shadow-card">
           
           {/* Left Column: Product Visual Container */}
           <motion.div

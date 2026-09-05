@@ -14,7 +14,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export const BenefitsSection: React.FC = () => {
   return (
-    <section id="benefits" className="py-16 sm:py-24 section-beige relative overflow-hidden">
+    <section id="benefits" className="py-10 sm:py-24 section-beige relative overflow-hidden">
       <Container>
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
           <span className="text-xs font-bold uppercase tracking-widest text-clay-600">

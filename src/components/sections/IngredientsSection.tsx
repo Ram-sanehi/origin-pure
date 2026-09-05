@@ -4,7 +4,7 @@ import { ShieldCheck, CheckCircle, Leaf, Sparkles } from 'lucide-react';
 
 export const IngredientsSection: React.FC = () => {
   return (
-    <section className="py-16 sm:py-24 section-sage relative">
+    <section className="py-10 sm:py-24 section-sage relative">
       <Container>
         <div className="max-w-3xl mx-auto text-center space-y-4">
           <div className="w-12 h-12 rounded-full bg-teagreen-900 text-amber-300 mx-auto flex items-center justify-center">

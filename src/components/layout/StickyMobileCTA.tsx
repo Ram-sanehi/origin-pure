@@ -31,9 +31,9 @@ export const StickyMobileCTA: React.FC = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed bottom-0 left-0 right-0 z-30 md:hidden bg-cream-100/95 backdrop-blur-md border-t border-cream-300 shadow-2xl p-3 px-4"
+          className="fixed bottom-0 left-0 right-0 z-30 md:hidden bg-cream-100/95 backdrop-blur-md border-t border-cream-300 shadow-2xl p-3 px-4 pb-[calc(0.75rem+env(safe-area-inset-bottom))]"
         >
-          <div className="flex items-center justify-between gap-3 max-w-md mx-auto">
+          <div className="flex flex-col gap-2.5 max-w-md mx-auto">
             {/* Left: Product Thumbnail & Name + Price */}
             <div className="flex items-center gap-2.5 min-w-0">
               <img
@@ -64,7 +64,7 @@ export const StickyMobileCTA: React.FC = () => {
               size="sm"
               glow
               onClick={handleAmazonBuy}
-              className="py-2.5 px-4 text-xs font-bold shrink-0"
+              className="w-full py-2.5 px-4 text-xs font-bold shrink-0"
               data-track-cta="sticky-mobile-buy-amazon"
             >
               <span className="flex items-center gap-1.5">

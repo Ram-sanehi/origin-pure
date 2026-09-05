@@ -12,14 +12,14 @@ export const LaunchOfferSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 sm:py-20 section-clay border-t border-cream-300/80 relative overflow-hidden">
+    <section className="py-10 sm:py-20 section-clay border-t border-cream-300/80 relative overflow-hidden">
       <Container size="md">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-cream-50 p-8 sm:p-12 rounded-3xl border border-clay-300/60 shadow-card text-center space-y-6 relative"
+          className="bg-cream-50 p-5 sm:p-12 rounded-3xl border border-clay-300/60 shadow-card text-center space-y-5 sm:space-y-6 relative"
         >
           {/* Pill Tag */}
           <div className="inline-flex items-center gap-2 bg-amber-100/90 text-amber-900 border border-amber-300 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">

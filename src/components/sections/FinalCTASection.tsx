@@ -12,7 +12,7 @@ export const FinalCTASection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 sm:py-28 section-dark relative overflow-hidden">
+    <section className="py-12 sm:py-28 section-dark relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teagreen-800/20 rounded-full blur-3xl pointer-events-none" />
 
       <Container size="md">
@@ -21,7 +21,7 @@ export const FinalCTASection: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative bg-teagreen-900/80 border border-teagreen-800/90 rounded-3xl p-8 sm:p-14 text-center space-y-8 shadow-2xl overflow-hidden"
+          className="relative bg-teagreen-900/80 border border-teagreen-800/90 rounded-3xl p-5 sm:p-14 text-center space-y-6 sm:space-y-8 shadow-2xl overflow-hidden"
         >
           <div className="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none">
             <img src={MAIN_FEATURED_PRODUCT.images[0]} alt="" className="w-full h-full object-cover" />

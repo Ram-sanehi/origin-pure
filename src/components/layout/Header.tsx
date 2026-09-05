@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
         'sticky top-0 z-40 transition-all duration-300 backdrop-blur-md border-b',
         isScrolled
           ? 'bg-cream-100/90 shadow-soft py-3 border-cream-300/80'
-          : 'bg-cream-100/60 py-4 border-cream-200/50'
+          : 'bg-cream-100/60 py-3 sm:py-4 border-cream-200/50'
       )}
     >
       <Container>
@@ -41,13 +41,13 @@ export const Header: React.FC = () => {
             <img
               src={brandLogo}
               alt="Origin Pure Logo"
-              className="h-10 w-auto rounded-lg object-contain transition-transform duration-300 group-hover:scale-105 shadow-xs"
+              className="h-9 sm:h-10 w-auto rounded-lg object-contain transition-transform duration-300 group-hover:scale-105 shadow-xs"
             />
             <div className="flex flex-col">
-              <span className="font-serif font-bold text-xl tracking-tight text-teagreen-950 leading-none">
+              <span className="font-serif font-bold text-lg sm:text-xl tracking-tight text-teagreen-950 leading-none">
                 Origin Pure
               </span>
-              <span className="text-[9px] tracking-widest uppercase text-clay-600 font-bold mt-0.5">
+              <span className="hidden sm:block text-[9px] tracking-widest uppercase text-clay-600 font-bold mt-0.5">
                 Natural Botanicals
               </span>
             </div>
@@ -102,7 +102,7 @@ export const Header: React.FC = () => {
               variant="primary"
               size="sm"
               onClick={handleAmazonBuy}
-              className="px-3 py-1.5 text-xs font-bold"
+              className="min-h-11 px-3 text-[11px] font-bold"
               data-track-cta="mobile-header-buy-amazon"
             >
               <span>BUY ON AMAZON</span>
@@ -110,7 +110,7 @@ export const Header: React.FC = () => {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-teagreen-950 hover:text-teagreen-800 focus:outline-none"
+              className="min-h-11 min-w-11 p-2 text-teagreen-950 hover:text-teagreen-800 focus:outline-none flex items-center justify-center"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -131,28 +131,28 @@ export const Header: React.FC = () => {
               <a
                 href="#shop"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 rounded-xl hover:bg-cream-200 text-teagreen-950 font-semibold"
+                className="flex min-h-11 items-center px-3 py-2 rounded-xl hover:bg-cream-200 text-teagreen-950 font-semibold"
               >
                 Shop Collection
               </a>
               <a
                 href="#story"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 rounded-xl hover:bg-cream-200"
+                className="flex min-h-11 items-center px-3 py-2 rounded-xl hover:bg-cream-200"
               >
                 Our Story
               </a>
               <a
                 href="#why-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 rounded-xl hover:bg-cream-200"
+                className="flex min-h-11 items-center px-3 py-2 rounded-xl hover:bg-cream-200"
               >
                 Why Us
               </a>
               <a
                 href="#reviews"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 rounded-xl hover:bg-cream-200"
+                className="flex min-h-11 items-center px-3 py-2 rounded-xl hover:bg-cream-200"
               >
                 Customer Reviews
               </a>

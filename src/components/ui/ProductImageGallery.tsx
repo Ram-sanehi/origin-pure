@@ -30,7 +30,7 @@ export const ProductImageGallery: React.FC<ProductImageGalleryProps> = ({
   };
 
   return (
-    <div className={`flex flex-col md:flex-row gap-4 lg:gap-6 w-full select-none ${className}`}>
+    <div className={`flex flex-col md:flex-row gap-3 sm:gap-4 lg:gap-6 w-full select-none ${className}`}>
       {/* ── Desktop & Tablet: Vertical Thumbnail Strip (Left) ── */}
       <div className="hidden md:flex flex-col gap-3 shrink-0">
         {displayImages.map((img, idx) => {
@@ -63,7 +63,7 @@ export const ProductImageGallery: React.FC<ProductImageGalleryProps> = ({
       </div>
 
       {/* ── Center: Main Large Product Viewer (Static, Clean Image) ── */}
-      <div className="relative flex-1 bg-sand-100 border border-cream-300 rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] flex items-center justify-center p-3 sm:p-5 group">
+      <div className="relative flex-1 bg-sand-100 border border-cream-300 rounded-2xl sm:rounded-3xl overflow-hidden aspect-square sm:aspect-[4/3] flex items-center justify-center p-3 sm:p-5 group">
         <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.img
@@ -75,6 +75,8 @@ export const ProductImageGallery: React.FC<ProductImageGalleryProps> = ({
               exit={{ opacity: 0.4 }}
               transition={{ duration: 0.2, ease: 'easeOut' }}
               className="w-full h-full object-contain pointer-events-none"
+              loading="lazy"
+              decoding="async"
             />
           </AnimatePresence>
         </div>
@@ -84,14 +86,14 @@ export const ProductImageGallery: React.FC<ProductImageGalleryProps> = ({
           <>
             <button
               onClick={handlePrev}
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-cream-50/90 border border-cream-300/80 hover:bg-cream-100 hover:border-teagreen-800 text-teagreen-950 flex items-center justify-center transition-all duration-200 opacity-80 hover:opacity-100 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-teagreen-800"
+              className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 min-h-11 min-w-11 rounded-full bg-cream-50/90 border border-cream-300/80 hover:bg-cream-100 hover:border-teagreen-800 text-teagreen-950 flex items-center justify-center transition-all duration-200 opacity-80 hover:opacity-100 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-teagreen-800"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={handleNext}
-              className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-cream-50/90 border border-cream-300/80 hover:bg-cream-100 hover:border-teagreen-800 text-teagreen-950 flex items-center justify-center transition-all duration-200 opacity-80 hover:opacity-100 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-teagreen-800"
+              className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 min-h-11 min-w-11 rounded-full bg-cream-50/90 border border-cream-300/80 hover:bg-cream-100 hover:border-teagreen-800 text-teagreen-950 flex items-center justify-center transition-all duration-200 opacity-80 hover:opacity-100 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-teagreen-800"
               aria-label="Next image"
             >
               <ChevronRight className="w-5 h-5" />

@@ -13,11 +13,11 @@ export const HeroSection: React.FC = () => {
   return (
     <>
       {/* ─── Main Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative py-10 sm:py-16 lg:py-20 section-cream overflow-hidden">
+      <section className="relative py-8 sm:py-16 lg:py-20 section-cream overflow-hidden">
         <div className="absolute top-0 right-0 w-[480px] h-[480px] bg-amber-100/25 rounded-full blur-3xl pointer-events-none -mr-32 -mt-16" />
 
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-center">
 
             {/* ── Left: Brand Message ──────────────────────────────────────── */}
             <motion.div
@@ -31,7 +31,7 @@ export const HeroSection: React.FC = () => {
               </span>
 
               {/* Headline */}
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-teagreen-950 leading-[1.1] tracking-tight">
+              <h1 className="text-[2rem] sm:text-5xl lg:text-6xl font-serif font-bold text-teagreen-950 leading-[1.1] tracking-tight">
                 Tea that tastes like{' '}
                 <span className="italic font-normal text-clay-600">what&apos;s in it.</span>
               </h1>
@@ -44,11 +44,11 @@ export const HeroSection: React.FC = () => {
               {/* Action & Trust Block */}
               <div className="space-y-3 pt-1">
                 {/* CTAs */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                   <button
                     onClick={handleAmazonShop}
                     data-track-cta="hero-shop-amazon"
-                    className="inline-flex items-center gap-2 bg-[#7C3A18] hover:bg-[#5C2B10] text-white text-xs sm:text-sm font-bold uppercase tracking-widest px-7 py-3.5 rounded-full transition-colors shadow-md border border-[#5C2B10] cursor-pointer"
+                    className="inline-flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 bg-[#7C3A18] hover:bg-[#5C2B10] text-white text-xs sm:text-sm font-bold uppercase tracking-widest px-7 py-3.5 rounded-full transition-colors shadow-md border border-[#5C2B10] cursor-pointer"
                   >
                     <span>SHOP ON AMAZON</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -56,7 +56,7 @@ export const HeroSection: React.FC = () => {
 
                   <a
                     href="#shop"
-                    className="text-xs sm:text-sm font-semibold text-charcoal-800/70 hover:text-teagreen-950 underline underline-offset-4 decoration-cream-400 transition-colors tracking-wide"
+                    className="min-h-11 inline-flex items-center justify-center text-xs sm:text-sm font-semibold text-charcoal-800/70 hover:text-teagreen-950 underline underline-offset-4 decoration-cream-400 transition-colors tracking-wide"
                   >
                     See the collection ↓
                   </a>
@@ -78,11 +78,13 @@ export const HeroSection: React.FC = () => {
             >
               <div className="relative w-full max-w-sm mx-auto">
                 <div className="absolute inset-2 bg-sand-100 rounded-3xl" />
-                <div className="relative rounded-3xl overflow-hidden border border-cream-300/80 bg-sand-100 aspect-square flex items-center justify-center p-2">
+                <div className="relative rounded-3xl overflow-hidden border border-cream-300/80 bg-sand-100 aspect-square flex items-center justify-center p-3 sm:p-5">
                   <img
                     src={MAIN_FEATURED_PRODUCT.images[0]}
                     alt="Origin Pure Herbal Collection"
                     className="w-full h-full object-contain scale-110"
+                    loading="eager"
+                    decoding="async"
                     draggable={false}
                   />
                 </div>

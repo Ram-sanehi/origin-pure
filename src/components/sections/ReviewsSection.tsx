@@ -6,7 +6,7 @@ import { CheckCircle2, Quote } from 'lucide-react';
 
 export const ReviewsSection: React.FC = () => {
   return (
-    <section id="reviews" className="py-16 sm:py-24 section-clay">
+    <section id="reviews" className="py-10 sm:py-24 section-clay">
       <Container>
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">

@@ -20,7 +20,7 @@ export const ProductShowcase: React.FC = () => {
   const activeBundle = activeProduct.bundles.find(b => b.id === selectedBundleId) || activeProduct.bundles[0];
 
   return (
-    <section id="ceremony" className="py-16 sm:py-24 section-cream border-t border-cream-300/60">
+    <section id="ceremony" className="py-10 sm:py-24 section-cream border-t border-cream-300/60">
       <Container>
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
           <span className="text-xs font-bold uppercase tracking-widest text-teagreen-800">

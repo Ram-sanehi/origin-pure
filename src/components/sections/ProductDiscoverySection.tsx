@@ -346,7 +346,7 @@ export const ProductDiscoverySection: React.FC = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-40px' }}
-            className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4.5 lg:gap-5.5"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-5.5"
           >
             {PRODUCTS.map((product) => (
               <ProductCard key={product.id} product={product} onSelect={setSelected} />

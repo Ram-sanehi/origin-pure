@@ -5,7 +5,7 @@ import { MapPin } from 'lucide-react';
 
 export const BrandStorySection: React.FC = () => {
   return (
-    <section id="story" className="py-20 sm:py-28 section-cream border-t border-cream-300/80">
+    <section id="story" className="py-12 sm:py-28 section-cream border-t border-cream-300/80">
       <Container size="lg">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 

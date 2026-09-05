@@ -42,9 +42,9 @@ export const FAQSection: React.FC = () => {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="py-16 sm:py-24 section-cream border-t border-cream-300/80">
+    <section className="py-10 sm:py-24 section-cream border-t border-cream-300/80">
       <Container size="md">
-        <div className="text-center max-w-xl mx-auto space-y-3 mb-12">
+        <div className="text-center max-w-xl mx-auto space-y-3 mb-8 sm:mb-12">
           <span className="text-xs font-bold uppercase tracking-[0.22em] text-clay-600">
             FAQ
           </span>
@@ -67,7 +67,7 @@ export const FAQSection: React.FC = () => {
               >
                 <button
                   onClick={() => toggle(i)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 text-sm sm:text-base font-semibold text-teagreen-950 hover:text-clay-600 transition-colors focus:outline-none"
+                  className="w-full min-h-11 p-4 sm:p-6 text-left flex items-center justify-between gap-4 text-sm sm:text-base font-semibold text-teagreen-950 hover:text-clay-600 transition-colors focus:outline-none"
                   aria-expanded={isOpen}
                 >
                   <span>{faq.question}</span>
