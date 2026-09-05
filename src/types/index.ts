@@ -16,6 +16,20 @@ export interface BundleOption {
   amazonUrl?: string;
 }
 
+export interface CartItem {
+  product: Product;
+  selectedBundle: BundleOption;
+  quantity: number;
+}
+
+export interface BenefitPillar {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  highlightText: string;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -48,8 +62,9 @@ export interface Review {
   rating: number;
   date: string;
   title: string;
-  content: string;
-  verifiedPurchase: boolean;
+  comment: string;
+  verifiedBuyer: boolean;
+  avatarUrl?: string;
   location?: string;
   productName?: string;
 }

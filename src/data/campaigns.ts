@@ -9,7 +9,7 @@ export interface CampaignConfig {
   secondaryCtaText: string;
 }
 
-export className MetaCampaigns {
+export class MetaCampaigns {
   // Campaign A: Quality & Single-Origin Focus
   static quality: CampaignConfig = {
     id: 'campaign-quality',
