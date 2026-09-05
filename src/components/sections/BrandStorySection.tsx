@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from '../ui/Container';
 import { motion } from 'framer-motion';
 import { MapPin } from 'lucide-react';
+import aboutImage from '../../images/about.png';
 
 export const BrandStorySection: React.FC = () => {
   return (
@@ -76,7 +77,7 @@ export const BrandStorySection: React.FC = () => {
           >
             <div className="rounded-3xl overflow-hidden bg-sand-100 border border-cream-200 aspect-[4/5] flex items-center justify-center p-3 shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1000&q=80"
+                src={aboutImage}
                 alt="Origin Pure Natural Herbal Botanicals Sourcing"
                 className="w-full h-full object-cover rounded-2xl"
                 draggable={false}

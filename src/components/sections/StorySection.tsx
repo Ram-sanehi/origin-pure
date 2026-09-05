@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from '../ui/Container';
 import { Leaf, MapPin } from 'lucide-react';
+import aboutImage from '../../images/about.png';
 
 export const StorySection: React.FC = () => {
   return (
@@ -65,7 +66,7 @@ export const StorySection: React.FC = () => {
           <div className="lg:col-span-5 relative">
             <div className="rounded-3xl overflow-hidden border-2 border-teagreen-700/80 shadow-2xl bg-teagreen-900">
               <img
-                src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1000&q=80"
+                src={aboutImage}
                 alt="Origin Pure Herbal Infusions Sourcing"
                 className="w-full h-[480px] lg:h-[540px] object-cover opacity-90"
               />

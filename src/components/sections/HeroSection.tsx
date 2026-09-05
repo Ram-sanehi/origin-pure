@@ -78,11 +78,11 @@ export const HeroSection: React.FC = () => {
             >
               <div className="relative w-full max-w-sm mx-auto">
                 <div className="absolute inset-2 bg-sand-100 rounded-3xl" />
-                <div className="relative rounded-3xl overflow-hidden border border-cream-300/80 bg-sand-100 aspect-square flex items-center justify-center p-3 sm:p-5">
+                <div className="relative rounded-3xl overflow-hidden border border-cream-300/80 bg-sand-100 aspect-square flex items-center justify-center p-2 sm:p-3">
                   <img
                     src={MAIN_FEATURED_PRODUCT.images[0]}
                     alt="Origin Pure Herbal Collection"
-                    className="w-full h-full object-contain scale-110"
+                    className="w-full h-full object-contain"
                     loading="eager"
                     decoding="async"
                     draggable={false}
