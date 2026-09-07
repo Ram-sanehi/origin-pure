@@ -123,6 +123,17 @@ const ProductModal: React.FC<{ product: Product; onClose: () => void }> = ({ pro
               {product.fullDescription}
             </p>
 
+            <div className="space-y-2">
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-charcoal-800">BENEFITS & DETAILS</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-charcoal-800/80">
+                {product.keyBenefits.map((benefit) => (
+                  <div key={benefit} className="flex items-start gap-2 rounded-xl bg-teagreen-50 px-3 py-2">
+                    <span className="font-bold text-teagreen-800">✓</span><span>{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Product Info Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-2.5 text-xs">
               {[
@@ -181,7 +192,7 @@ const ProductModal: React.FC<{ product: Product; onClose: () => void }> = ({ pro
               <button
                 onClick={handleBuy}
                 data-track-cta={`modal-buy-amazon-${product.id}`}
-                className="w-full flex items-center justify-center gap-2 bg-[#7C3A18] hover:bg-[#5C2B10] text-white font-bold text-xs sm:text-sm tracking-widest uppercase py-3 px-5 rounded-xl transition-colors shadow-md border border-[#5C2B10] cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 bg-[#FF9900] hover:bg-[#E68A00] text-black font-bold text-xs sm:text-sm tracking-widest uppercase py-3 px-5 rounded-xl transition-colors shadow-md border border-[#E68A00] cursor-pointer"
               >
                 <span>BUY ON AMAZON</span>
                 <ExternalLink className="w-4 h-4" />
@@ -248,6 +259,10 @@ const ProductCard: React.FC<{ product: Product; onSelect: (product: Product) => 
   const images = product.images && product.images.length > 0 ? product.images : ['/placeholder.png'];
   const currentImg = images[activeIdx] || images[0];
 
+  const handleBuy = () => {
+    redirectToAmazon(product.amazonUrl, 'collection-card-buy', product.id);
+  };
+
   return (
     <motion.div
       variants={fadeInUp}
@@ -293,7 +308,7 @@ const ProductCard: React.FC<{ product: Product; onSelect: (product: Product) => 
 
       {/* 3. Product Name (Strict 2-Line Limit with Consistent Card Height) */}
       <h3
-        onClick={() => onSelect(product)}
+        onClick={handleBuy}
         className="text-xs sm:text-xs font-serif font-bold text-teagreen-950 text-center leading-tight px-1 my-0.5 h-8 sm:h-9 line-clamp-2 flex items-center justify-center cursor-pointer hover:text-clay-600 transition-colors overflow-hidden"
       >
         {product.name}
@@ -309,11 +324,11 @@ const ProductCard: React.FC<{ product: Product; onSelect: (product: Product) => 
       {/* 5. High-Visibility Warm Brown Full-Width CTA Button */}
       <button
         onClick={() => onSelect(product)}
-        className="w-full bg-[#7C3A18] hover:bg-[#5C2B10] text-white font-sans font-bold text-xs tracking-wider uppercase py-2.5 sm:py-3 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all duration-200 shadow-md border border-[#5C2B10] cursor-pointer mt-1"
+        className="w-full bg-[#FF9900] hover:bg-[#E68A00] text-black font-sans font-bold text-xs tracking-wider uppercase py-2.5 sm:py-3 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all duration-200 shadow-md border border-[#E68A00] cursor-pointer mt-1"
         aria-label={`See details for ${product.name}`}
       >
-        <span>SEE DETAILS</span>
-        <ArrowRight className="w-3.5 h-3.5 text-white transition-transform duration-200 group-hover/btn:translate-x-1" />
+        <span>Buy on Amazon</span>
+        <ArrowRight className="w-3.5 h-3.5 text-black transition-transform duration-200 group-hover/btn:translate-x-1" />
       </button>
     </motion.div>
   );

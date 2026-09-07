@@ -119,15 +119,27 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links Column */}
           <div className="md:col-span-3">
-            <div className="space-y-3">
+            <div className="grid grid-cols-2 gap-6">
+              <div className="space-y-3">
               <h4 className="font-serif font-bold text-sm text-cream-50 uppercase tracking-wider">
-                About
+                Learn
               </h4>
               <ul className="space-y-2 text-xs text-cream-200/80 font-sans">
                 <li><a href="#story" className="hover:text-amber-300 transition-colors">Our Story</a></li>
-                <li><a href="#why-us" className="hover:text-amber-300 transition-colors">Why Us</a></li>
+                <li><a href="#botanicals" className="hover:text-amber-300 transition-colors">Ingredients</a></li>
+                <li><a href="#faq" className="hover:text-amber-300 transition-colors">FAQs</a></li>
                 <li><a href="#reviews" className="hover:text-amber-300 transition-colors">Reviews</a></li>
               </ul>
+              </div>
+              <div className="space-y-3">
+                <h4 className="font-serif font-bold text-sm text-cream-50 uppercase tracking-wider">Trust</h4>
+                <ul className="space-y-2 text-xs text-cream-200/80 font-sans">
+                  <li>Secure Payments</li>
+                  <li>Amazon Fulfilled</li>
+                  <li>Biodegradable Packaging</li>
+                  <li><a href="https://www.instagram.com/originpure.in/" target="_blank" rel="noreferrer" className="hover:text-amber-300 transition-colors">Follow Us</a></li>
+                </ul>
+              </div>
             </div>
           </div>
 

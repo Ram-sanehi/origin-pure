@@ -65,7 +65,7 @@ export const LaunchOfferSection: React.FC = () => {
               data-track-cta="launch-offer-buy-amazon"
             >
               <span className="flex items-center justify-center gap-2">
-                <span>BUY NOW ON AMAZON</span>
+                <span>Buy on Amazon</span>
                 <ExternalLink className="w-4.5 h-4.5" />
               </span>
             </Button>

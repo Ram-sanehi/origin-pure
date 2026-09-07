@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --theme-background: #F6F2EA;
+  --theme-primary: #0F3D2E;
+  --theme-accent: #C46A2D;
+}
+
+[data-theme='luxury'] {
+  --theme-background: #FAF8F3;
+  --theme-primary: #1B2A41;
+  --theme-accent: #C9A227;
+}
+
+[data-theme='organic'] {
+  --theme-background: #F8F7F4;
+  --theme-primary: #244D3D;
+  --theme-accent: #D97706;
+}
+
+[data-theme='dark'] {
+  --theme-background: #071A13;
+  --theme-primary: #F8F4EC;
+  --theme-accent: #D4A017;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

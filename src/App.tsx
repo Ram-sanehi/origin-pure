@@ -8,7 +8,10 @@ import { FeaturedProductSection } from './components/sections/FeaturedProductSec
 import { CustomerReviewsSection } from './components/sections/CustomerReviewsSection';
 import { WhyThisTeaSection } from './components/sections/WhyThisTeaSection';
 import { ImmersiveIngredientsSection } from './components/sections/ImmersiveIngredientsSection';
+import { BotanicalCollectionSection } from './components/sections/BotanicalCollectionSection';
 import { BrandStorySection } from './components/sections/BrandStorySection';
+import { AmazonTrustSection } from './components/sections/AmazonTrustSection';
+import { InstagramSection } from './components/sections/InstagramSection';
 import { LaunchOfferSection } from './components/sections/LaunchOfferSection';
 import { FAQSection } from './components/sections/FAQSection';
 import { FinalCTASection } from './components/sections/FinalCTASection';
@@ -47,6 +50,9 @@ export function App() {
         {/* Immersive Ingredient Experience */}
         <ImmersiveIngredientsSection />
 
+        {/* Collection-wide ingredient index */}
+        <BotanicalCollectionSection />
+
         {/* Human Founder Story */}
         <BrandStorySection />
 
@@ -55,6 +61,10 @@ export function App() {
 
         {/* Frequently Asked Questions */}
         <FAQSection />
+
+        {/* Amazon confidence and community */}
+        <AmazonTrustSection />
+        <InstagramSection />
 
         {/* Final Conversion CTA */}
         <FinalCTASection />

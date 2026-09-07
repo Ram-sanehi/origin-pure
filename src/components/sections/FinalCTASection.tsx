@@ -49,11 +49,11 @@ export const FinalCTASection: React.FC = () => {
               fullWidth
               glow
               onClick={handleAmazonBuy}
-              className="py-4 text-base font-bold tracking-wider text-white bg-[#7C3A18] hover:bg-[#5C2B10] border border-[#5C2B10] shadow-xl"
+              className="py-4 text-base font-bold tracking-wider text-black bg-[#FF9900] hover:bg-[#E68A00] border border-[#E68A00] shadow-xl"
               data-track-cta="final-buy-amazon"
             >
               <span className="flex items-center justify-center gap-2.5">
-                <span>BUY ON AMAZON</span>
+                <span>Buy on Amazon</span>
                 <ExternalLink className="w-5 h-5" />
               </span>
             </Button>

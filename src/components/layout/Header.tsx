@@ -90,7 +90,7 @@ export const Header: React.FC = () => {
               data-track-cta="header-buy-amazon"
             >
               <span className="flex items-center gap-1.5">
-                <span>BUY ON AMAZON</span>
+                <span>Buy on Amazon</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </span>
             </Button>
@@ -105,7 +105,7 @@ export const Header: React.FC = () => {
               className="min-h-11 px-3 text-[11px] font-bold"
               data-track-cta="mobile-header-buy-amazon"
             >
-              <span>BUY ON AMAZON</span>
+              <span>Buy on Amazon</span>
             </Button>
 
             <button
@@ -167,7 +167,7 @@ export const Header: React.FC = () => {
                     handleAmazonBuy();
                   }}
                 >
-                  BUY ON AMAZON
+                  Buy on Amazon
                 </Button>
               </div>
             </motion.div>

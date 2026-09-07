@@ -28,10 +28,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const baseStyles = 'relative inline-flex min-h-11 items-center justify-center font-medium transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer overflow-hidden tracking-wide';
 
     const variants = {
-      primary: 'bg-[#7C3A18] text-white hover:bg-[#5C2B10] focus:ring-[#7C3A18] border border-[#5C2B10] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0',
+      primary: 'bg-[#FF9900] text-black hover:bg-[#E68A00] focus:ring-[#FF9900] border border-[#E68A00] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0',
       secondary: 'bg-cream-200 text-charcoal-900 hover:bg-cream-300 focus:ring-cream-300 border border-cream-300',
-      clay: 'bg-[#7C3A18] text-white hover:bg-[#5C2B10] focus:ring-[#7C3A18] border border-[#5C2B10] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0',
-      outline: 'border-2 border-[#7C3A18] text-[#7C3A18] hover:bg-[#7C3A18] hover:text-white focus:ring-[#7C3A18]',
+      clay: 'bg-[#FF9900] text-black hover:bg-[#E68A00] focus:ring-[#FF9900] border border-[#E68A00] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0',
+      outline: 'border-2 border-[#FF9900] text-black hover:bg-[#FF9900] focus:ring-[#FF9900]',
       ghost: 'text-charcoal-800 hover:bg-cream-200 focus:ring-cream-300',
     };
 

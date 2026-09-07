@@ -1,13 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container } from '../ui/Container';
-import { MAIN_FEATURED_PRODUCT } from '../../data/products';
+import { PRODUCTS } from '../../data/products';
 import { redirectToAmazon } from '../../lib/amazon';
 import { ExternalLink } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+
+const HERO_PRODUCT_IDS = [
+  'origin-pure-evening-calm',
+  'origin-pure-blue-pea',
+  'hibiscus-berry-green-tea',
+  'origin-pure-fennel-harmony',
+  'turmeric-gold-green-tea'
+];
+
+const HERO_ACCENTS = ['#9C5427', '#3B82A0', '#9F3F56', '#C28A32', '#B97720'];
 
 export const HeroSection: React.FC = () => {
+  const heroProducts = HERO_PRODUCT_IDS
+    .map((id) => PRODUCTS.find((product) => product.id === id))
+    .filter((product): product is (typeof PRODUCTS)[number] => Boolean(product));
+  const [activeIndex, setActiveIndex] = useState(0);
+  const product = heroProducts[activeIndex] || PRODUCTS[0];
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % heroProducts.length);
+    }, 5500);
+    return () => window.clearInterval(interval);
+  }, [heroProducts.length]);
+
   const handleAmazonShop = () => {
-    redirectToAmazon(MAIN_FEATURED_PRODUCT.amazonUrl, 'hero-primary-cta', MAIN_FEATURED_PRODUCT.id);
+    redirectToAmazon(product.amazonUrl, 'hero-primary-cta', product.id);
   };
 
   return (
@@ -38,8 +61,23 @@ export const HeroSection: React.FC = () => {
 
               {/* Short description */}
               <p className="text-base sm:text-lg text-charcoal-800/70 font-sans leading-relaxed max-w-sm">
-                Four herbal infusions made with real botanicals, in biodegradable pyramid bags. No fillers, no sprayed flavouring.
+                Whole botanicals, thoughtfully blended across a collection of floral, citrus, herbal, and warming infusions.
               </p>
+
+              <div className="flex items-center gap-3 text-sm font-semibold text-teagreen-950">
+                <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: HERO_ACCENTS[activeIndex] }} />
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={product.id}
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    transition={{ duration: 0.25 }}
+                  >
+                    {product.shortDescription}
+                  </motion.span>
+                </AnimatePresence>
+              </div>
 
               {/* Action & Trust Block */}
               <div className="space-y-3 pt-1">
@@ -48,9 +86,9 @@ export const HeroSection: React.FC = () => {
                   <button
                     onClick={handleAmazonShop}
                     data-track-cta="hero-shop-amazon"
-                    className="inline-flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 bg-[#7C3A18] hover:bg-[#5C2B10] text-white text-xs sm:text-sm font-bold uppercase tracking-widest px-7 py-3.5 rounded-full transition-colors shadow-md border border-[#5C2B10] cursor-pointer"
+                    className="inline-flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 bg-[#FF9900] hover:bg-[#E68A00] text-black text-xs sm:text-sm font-bold uppercase tracking-widest px-7 py-3.5 rounded-full transition-colors shadow-md border border-[#E68A00] cursor-pointer"
                   >
-                    <span>SHOP ON AMAZON</span>
+                    <span>Buy on Amazon</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </button>
 
@@ -79,14 +117,34 @@ export const HeroSection: React.FC = () => {
               <div className="relative w-full max-w-sm mx-auto">
                 <div className="absolute inset-2 bg-sand-100 rounded-3xl" />
                 <div className="relative rounded-3xl overflow-hidden border border-cream-300/80 bg-sand-100 aspect-square flex items-center justify-center p-2 sm:p-3">
-                  <img
-                    src={MAIN_FEATURED_PRODUCT.images[0]}
-                    alt="Origin Pure Herbal Collection"
-                    className="w-full h-full object-contain"
-                    loading="eager"
-                    decoding="async"
-                    draggable={false}
-                  />
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={product.id}
+                      src={product.images[0]}
+                      alt={product.name}
+                      initial={{ opacity: 0, scale: 1.03 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.98 }}
+                      transition={{ duration: 0.55, ease: 'easeOut' }}
+                      className="w-full h-full object-contain"
+                      loading="eager"
+                      decoding="async"
+                      draggable={false}
+                    />
+                  </AnimatePresence>
+                </div>
+                <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-cream-50/90 px-3 py-2 shadow-sm backdrop-blur-sm" aria-label="Choose a blend">
+                  {heroProducts.map((heroProduct, index) => (
+                    <button
+                      key={heroProduct.id}
+                      type="button"
+                      onClick={() => setActiveIndex(index)}
+                      aria-label={`Show ${heroProduct.name}`}
+                      aria-current={index === activeIndex}
+                      className={`h-2 rounded-full transition-all ${index === activeIndex ? 'w-6' : 'w-2'}`}
+                      style={{ backgroundColor: index === activeIndex ? HERO_ACCENTS[index] : '#C4BEB4' }}
+                    />
+                  ))}
                 </div>
               </div>
             </motion.div>

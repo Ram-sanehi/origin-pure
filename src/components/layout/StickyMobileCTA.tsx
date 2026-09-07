@@ -68,7 +68,7 @@ export const StickyMobileCTA: React.FC = () => {
               data-track-cta="sticky-mobile-buy-amazon"
             >
               <span className="flex items-center gap-1.5">
-                <span>BUY NOW ON AMAZON</span>
+                <span>Buy on Amazon</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </span>
             </Button>
